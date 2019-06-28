@@ -88,7 +88,7 @@ func (m *DefMount) Filesystem() (string, error) {
 }
 
 func getMount(mountpoint string) (*mount.Info, error) {
-	entries, err := mount.GetMounts(nil)
+	entries, err := mount.GetMounts()
 	if err != nil {
 		return nil, err
 	}
